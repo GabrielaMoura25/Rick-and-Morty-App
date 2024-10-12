@@ -25,18 +25,20 @@ Este projeto é uma aplicação web desenvolvida em Angular, que permite aos usu
 1. **Clone o repositório**:
   ```bash
   git clone git@github.com:GabrielaMoura25/Rick-and-Morty-App.git
+  ```
 
 2. **Navegue até o diretório do projeto**:
   ```bash
-  cd rick-and-morty-character-search
+  cd rick-and-morty-app
+ ```
 
 3. **Instale as dependências**:
   ```bash
   npm install
-
+```
 
 4. **Execute a aplicação**:
   ```bash
   ng serve
-
+```
 4. **Acesse no navegador: Abra seu navegador e acesse http://localhost:4200.**
