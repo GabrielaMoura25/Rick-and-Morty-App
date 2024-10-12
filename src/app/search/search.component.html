@@ -1,0 +1,33 @@
+<app-header [favoriteCount]="favoriteCount"></app-header>
+
+<div class="search-container">
+  <div class="container-header">
+    <img src="../../assets/inicio.png" alt="Início">
+    <input type="text" [(ngModel)]="searchTerm" (ngModelChange)="onSearchInputChange()" placeholder="Pesquisar" class="input"/>
+  </div>
+
+  <div class="body">
+    <div *ngIf="isLoading" class="poppins-regular-text">Carregando...</div>
+
+    <div *ngIf="characters.length === 0 && !isLoading" class="no-results poppins-regular-error">
+      <h2>Nada foi encontrado</h2>
+      <p>Tente realizar uma nova busca.</p>
+    </div>
+
+    <div class="characters-list">
+      <div *ngFor="let character of characters" class="character-card">
+        <div class="image-container">
+          <img [src]="character.image" alt="{{ character.name }}" />
+          <button class="favorite-button" (click)="toggleFavorite(character)">
+            <span class="heart" *ngIf="isFavorite(character)">&#10084;</span>
+            <span class="heart-empty" *ngIf="!isFavorite(character)">&#9825;</span>
+          </button>
+        </div>
+        <h2 class="creepster-regular-name">{{ character.name }}</h2>
+        <p class="poppins-regular-text">{{ character.species }}</p>
+        <p class="poppins-regular-text">{{ character.gender }}</p>
+        <p class="poppins-regular-text">{{ character.type }}</p>
+      </div>
+    </div>
+  </div>
+</div>

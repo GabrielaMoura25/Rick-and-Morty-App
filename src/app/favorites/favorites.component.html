@@ -1,0 +1,32 @@
+<app-header [favoriteCount]="favoriteCount"></app-header>
+
+<div class="search-container">
+  <div class="favorites-container">
+    <img src="../../assets/favoritos.png" alt="Favoritos">
+  </div>
+
+  <div class="body">
+    <div *ngIf="favoriteCharacters.length === 0" class="no-results poppins-regular-error">
+      <h2>Parece que você ainda não tem favoritos</h2>
+      <p>Volte à página inicial e escolha os melhores para você.</p>
+      <button class="back-button" (click)="goHome()">Voltar ao início</button>
+    </div>
+
+    <div class="characters-list">
+      <div *ngFor="let character of favoriteCharacters" class="character-card">
+        <div class="image-container">
+          <img [src]="character.image" alt="{{ character.name }}" />
+
+          <button class="favorite-button" (click)="removeFavorite(character.id)">
+            <span class="heart">&#10084;</span>
+          </button>
+        </div>
+        <h2 class="creepster-regular-name">{{ character.name }}</h2>
+        <p class="poppins-regular-text">{{ character.species }}</p>
+        <p class="poppins-regular-text">{{ character.gender }}</p>
+        <p class="poppins-regular-text">{{ character.type }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+

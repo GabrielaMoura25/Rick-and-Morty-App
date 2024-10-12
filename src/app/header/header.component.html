@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="header-left">
+    <img src="../../assets/logo.png" alt="Logo">
+  </div>
+  <div class="header-right">
+    <a (click)="goHome()" class="nav-button poppins-regular-inicio">
+      <i class="fa-sharp fa-solid fa-house" style="font-size: 17px;"></i>
+      Início
+    </a>
+
+    <a (click)="goFavorites()" class="nav-button poppins-regular-text">
+      <i class="fas fa-heart" style="font-size: 15px;"></i>
+      Favoritos
+      <span class="favorite-count">{{ favoriteCount }}</span>
+    </a>
+  </div>
+</div>
