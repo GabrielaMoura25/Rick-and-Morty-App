@@ -1,7 +1,5 @@
 # Rick and Morty Character Search
 
-![Rick and Morty](https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Rick_and_Morty_logo.svg/1280px-Rick_and_Morty_logo.svg.png)
-
 ## Descrição
 
 Este projeto é uma aplicação web desenvolvida em Angular, que permite aos usuários pesquisar e visualizar personagens da série *Rick and Morty*. Os usuários podem favoritar personagens e visualizar seus favoritos em uma página separada. A aplicação utiliza a API pública do *Rick and Morty* para buscar dados de personagens.
